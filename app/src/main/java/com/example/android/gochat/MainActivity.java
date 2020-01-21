@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        logo = findViewById(R.id.logo);
+        //logo = findViewById(R.id.logo);
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
                 finish();
             }
         },SPLASH_TIME_OUT);
-        Animation myanim = Animation.loadAnimation(this,R.anim.animation);
-        logo.startAnimation(myanim);
+       // Animation myanim = Animation.loadAnimation(this,R.anim.animation);
+        //logo.startAnimation(myanim);
     }
 }

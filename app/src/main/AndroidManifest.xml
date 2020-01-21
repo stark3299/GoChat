@@ -17,7 +17,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Common" />
+        <activity android:name=".Common">
+            <intent-filter>
+            android:theme="Theme.AppCompat.Light.NoActionBar"/>
+                <action android:name="android.intent.action.MAIN" />
+            </intent-filter>
+        </activity>
         <activity android:name=".ChatMessage" />
         <activity android:name=".Mains"></activity>
     </application>

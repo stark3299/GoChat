@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -34,6 +35,7 @@ public class Mains extends AppCompatActivity implements View.OnClickListener{
     public FirebaseAuth mAuth;
     public GoogleSignInClient mGoogleSignInClient;
     public LinearLayout google1;
+    public ImageView google2;
     DatabaseReference mdatabase;;
 
     @Override
@@ -42,6 +44,8 @@ public class Mains extends AppCompatActivity implements View.OnClickListener{
         setContentView(R.layout.activity_common);
         google1 = findViewById(R.id.google1);
         google1.setOnClickListener(this);
+        google2 = findViewById(R.id.google2);
+        google2.setOnClickListener(this);
         mAuth = FirebaseAuth.getInstance();
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
@@ -170,6 +174,8 @@ public class Mains extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View view) {
         switch(view.getId()) {
             case R.id.google1:
+                signIn();
+            case R.id.google2:
                 signIn();
         }
     }
